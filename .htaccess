@@ -1,0 +1,7 @@
+RewriteEngine on
+
+RewriteCond &(REQUEST_FILENAME) !-f 
+RewriteCond &(REQUEST_FILENAME) !-d 
+RewriteRule ^(?!index\.php$)([^/]+)(?:/([^/]+))?$ index.php?controller=$1&action=$2 [L]
+
+AddDefaultCharset utf-8
